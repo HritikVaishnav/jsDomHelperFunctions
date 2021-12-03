@@ -636,3 +636,4 @@ function $checkOverflow(elem) {
   if (scrHeight > $arraySum(csHeight)) return true;
   else return false;
 }
+// end
