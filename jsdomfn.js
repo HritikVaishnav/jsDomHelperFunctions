@@ -149,6 +149,8 @@ function $wrap(to_wrap, wrap_in) {
   }
 }
 function $directTxt(elem) {
+  if (!elem) return console.error("invalid or missing argument");
+  $type(elem, "string") ? (elem = $q(elem)) : null;
   return Array.prototype.reduce.call(
     elem.childNodes,
     function (a, b) {
