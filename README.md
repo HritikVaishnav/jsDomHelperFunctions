@@ -5,44 +5,18 @@
 
 These are the functions i created to help me in my personal projects. Feel free to point out mistakes, add to list or improve upone it.
 
-**Funcation Usage :**
+**Function Usage :**
 
-**`$id(elemId:string)`**
-
-> Shorthand for `document.getElementById`
-
+| Function Usage               |                                                                                          Shorthand                                                                                           |
+|------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| `$id(elemId:string)`         |                                                                                   document.getElementById                                                                                    |
+| `$cls(elemClass:string)`     |                                                                               document.getElementsByClassName                                                                                |
+| `$tag(elemTag:string)`       |                                                                                document.getElementsByTagName                                                                                 |
+| `$onDomLoad(callback)`       |                                                                       Function to run a piece of code when DOM loads.                                                                        |
+| `$onDocumentReady(callback)` |                                                            Function to run a piece of code after document.ready event has fired.                                                             |
+| `$q(query,parent)`           |     **Arg types -** `query : string` `parent : string elem` Shorthand for querySelector & querySelectorAll _Default value of **parent** : document_ Returns : element , nodelist , null      |
+| `$onDocumentReady(callback)` |                                                            Function to run a piece of code after document.ready event has fired.                                                             |
 ---
-
-**`$cls(elemClass:string)`**
-
-> Shorthand for `document.getElementsByClassName`
-
----
-
-**`$tag(elemTag:string)`**
-
-> Shorthand for `document.getElementsByTagName`
-
----
-
-**`$onDomLoad(callback)`**
-
-> Function to run a piece of code when DOM loads.
-
----
-
-**`$onDocumentReady(callback)`**
-
-> Function to run a piece of code after document.ready event has fired.
-
----
-
-**`$q(query,parent)`**
-
-> **Arg types -** `query : string` `parent : string | elem`
-> Shorthand for querySelector & querySelectorAll
-> _Default value of **parent** : document_
-> Returns : element | nodelist | null
 
 - Prefix query argument with '@' to use querySelectorAll
 
@@ -77,4 +51,4 @@ These are the functions i created to help me in my personal projects. Feel free 
 
 ---
 
-### --Incomplete Documentation -Will complete as soon as i can .
+<mark> TODO </mark>: Incomplete Documentation -Will complete as soon as i can.
