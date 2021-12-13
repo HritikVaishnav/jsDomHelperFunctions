@@ -12,12 +12,18 @@ function $onDocumentReady(callback) {
     });
   }
 }
+
+
 function $id(e) {
   return document.getElementById(e);
 }
+
+
 function $cls(e) {
   return document.getElementsByClassName(e);
 }
+
+
 function $tag(e) {
   return document.getElementsByTagName(e);
 }
