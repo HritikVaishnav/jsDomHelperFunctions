@@ -96,6 +96,30 @@ These are the functions i created to help me in my personal projects. Feel free 
 
 ---
 
+**`$newElem(query, callback)`**
+> **Arg types -**  `query: string` `callback: function`
+
+> To facilitate easily creation of DOM elements using string input.
+> Callback can be used do something after the creation of element.
+> Callback has a default argument `e` which is the element created.
+> Returns : element
+
+Constructing string input : 
+- `div#test` returns a ***div*** with ***id = "test".***
+- `div.test` returns a ***div*** with ***class = "test".***
+- `div#test.test` returns a ***div*** with ***id = "test" & class="test".***
+- `div@a[data-test=dummyData]` returns a ***div*** with *attribute **data-test = dummyData***.
+- `div@p[innerText=dummyData]` returns a ***div*** with ***inner-text set to dummyData***.
+- Id is prefixed with `#` 
+- Class is prefixed with `.`
+- Attributes can be set with prefix `@a` with attribute  and its value inside squred brackets `[]` in the given format : `attributeName:value`
+- Properties can be set with prefix `@p` with property and its value inside squred brackets `[]` in the given format : `propertyName:value`
+
+
+> usage : **`$newElem('div.class1#id@a[style=color{red}]')`**
+
+---
+
 **`$newBlock(query)`**
 > **Arg types -**  `query: string`
 
@@ -261,4 +285,38 @@ These are the functions i created to help me in my personal projects. Feel free 
 
 ---
 
-### --Incomplete Documentation -Will complete as soon as i can .
+**`$checkOverflow(elem)`**
+> **Arg types -**  `elem: elem`
+> To check if element's scroll height is higher than its offset height.
+> Returns : boolean
+> usage : **`$checkOverflow(elem1)`**
+
+---
+
+**`$newFragment(children)`**
+> **Arg types -**  `children: array`
+> To make it easier and faster to use fragments.
+> *children: array of elements to append to fragment*.
+> Returns : document-fragment
+> usage : **`$newFragment([elem1,elem2])`**
+
+---
+
+**`$makeStr(length, ?characters)`**
+> **Arg types -**  `length: number` `characters: string`
+
+> To make a random string of specified length.
+> Characters argument is optional and can be used construct a string using specific set of characters.
+> _Default value of **characters** : All alphabets and numbers._
+> Returns : string
+> usage : **`$makeStr(5)`** **`$makeStr(5,'ac') : returns somethig like 'accac'`**
+
+---
+
+**`$arraySplit(array, seperator)`**
+> **Arg types -**  `array: array` `seperator: array item`
+> Similar to string.split but for array.
+> Returns : array of array's
+> usage : **`$arraySplit([a,b,c,d,e],c) : return [[a,b],[d,e]]`**
+
+---
