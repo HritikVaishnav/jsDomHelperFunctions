@@ -6,22 +6,22 @@ These are the functions I created to help me in my personal projects. Feel free 
   
 
 **Funcation Usage :**
-**`$id(elemId:string)`**
+### **`$id(elemId:string)`**
 - Shorthand for `document.getElementById`
 ---
-**`$cls(elemClass:string)`**
+### **`$cls(elemClass:string)`**
 - Shorthand for `document.getElementsByClassName`
 ---
-**`$tag(elemTag:string)`**
+### **`$tag(elemTag:string)`**
 - Shorthand for `document.getElementsByTagName`
 ---
-**`$onDomLoad(callback)`**
+### **`$onDomLoad(callback)`**
 - Function to run a piece of code when DOM loads.
 ---
-**`$onDocumentReady(callback)`**
+### **`$onDocumentReady(callback)`**
 - Function to run a piece of code after document.ready event has fired.
 ---
-**`$q(query,parent)`**
+### **`$q(query,parent)`**
 > **Arg types -**  `query : string`  `parent : string | elem`
 - Shorthand for querySelector & querySelectorAll
 - _Default value of **parent** : document_
@@ -30,8 +30,9 @@ These are the functions I created to help me in my personal projects. Feel free 
 
 **usage :** 
 > **`$q('div')`**  **`$q('@div')`**
+
 ---  
-**`$qmulti(query,parent,arrayOne)`**
+### **`$qmulti(query,parent,arrayOne)`**
 > **Arg types -**  `query : string`  `parent : string | elem`  `arrayOne : boolean`
 - To fetch multiple elements with multiple queries
 - _Default value of **parent** : document._ >_Default value of **arrayOne** : false._
@@ -40,8 +41,9 @@ These are the functions I created to help me in my personal projects. Feel free 
 
 **usage :** 
 > **`$qmulti('div,span')`** <br/> **`$qmulti('@div,span,@h2')`** <br/> **`$qmulti('@div,@span',document,true)`**
+
 ---
-**`$qtill(start,end,endPoints,textNodes)`**
+### **`$qtill(start,end,endPoints,textNodes)`**
 > **Arg types -**  `start,end: elem|string`  `endPoints,textNodes: boolean`
 - To fetch all elements from start element to end element within a single hierarchy.
 - _Default value of **endPoints** : true._ >_Default value of **textNodes** : false._
@@ -53,7 +55,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 >**`$qtill('#child1','#child8','#parent')`**
 
 ---  
-**`$closest(tofind,origin,nest_level)`**
+### **`$closest(tofind,origin,nest_level)`**
 > **Arg types -**  `tofind: string`  `origin: element`  `nest_level: number`
 - To get closest required element from origin irrespective of direct ancestory.
 - _Default value of **nest_level** : undefined._
@@ -64,7 +66,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 >**`$closest('h1',originElem)`** <br/> **`$closest('div.container|span',originElem)`**
 
 ---
-**`$wrap(to_wrap,wrap_in)`**
+### **`$wrap(to_wrap,wrap_in)`**
 > **Arg types -**  `to_wrap: elem|array of elem`  `wrap_in: element|string`
 - To wrap a element or a group of elements in a wrapper element.
 - _Default value of **wrap_in** : div._
@@ -74,7 +76,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 >**`$wrap([elem1,elem2],'section.wrapper')`**
 
 ---
-**`$directTxt(elem)`**
+### **`$directTxt(elem)`**
 > **Arg types -**  `elem: string|elem`
 - To get direct text content of an element excluding its children.
 - Returns : string
@@ -83,7 +85,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 >**`$directTxt('.container')`**
 
 ---
-**`$newElem(query, callback)`**
+### **`$newElem(query, callback)`**
 > **Arg types -**  `query: string`  `callback: function`
 - To facilitate easily creation of DOM elements using string input.
 - Callback can be used do something after the creation of element.
@@ -105,7 +107,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 >**`$newElem('div.class1#id@a[style=color{red}]')`**
 
 ---
-**`$newBlock(query)`**
+### **`$newBlock(query)`**
 > **Arg types -**  `query: string`
 - To create DOM templates with ease.
 - Returns : Document Fragment | null
@@ -118,7 +120,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 -  `div+{div>span}`: return two div's inside a document fragment. 2nd div has span as its child.
 
 ---
-**`$cloneAndReplace(elem, deepClone)`**
+### **`$cloneAndReplace(elem, deepClone)`**
 > **Arg types -**  `elem: array|elem`  `deepClone: boolean`
 - To clone and replace an element for specific usecases like deattatching event listeners.
 - _Default value of **deepClone** : true._
@@ -128,7 +130,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 >**`$cloneAndReplace([elem1,elem2])`**
 
 ---
-**`$addChildren(elems, parent)`**
+### **`$addChildren(elems, parent)`**
 > **Arg types -**  `elems: array of nodes`  `parent: elem`
 - To add child nodes array to a parent.
 - Returns : undefined
@@ -137,7 +139,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 >**`$addChildren([elem1,elem2,'txt'],parentElem)`**
 
 ---
-**`$cs(props, elem, pseudoElem)`**
+### **`$cs(props, elem, pseudoElem)`**
 > **Arg types -**  `props: string`  `elem: elem`  `pseudoElem: string`
 - _Default value of **pseudoElem** : null._
 - _Values of **pseudoElem** : `after`  `before`._
@@ -149,7 +151,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 >**`$cs('@width,@height',elem1)`** <br/> **`$cs('color,@padding',elem2)`**
 
 ---
-**`$style(css, elem)`**
+### **`$style(css, elem)`**
 > **Arg types -**  `css: string`  `elem: elem`
 - To set style of an element.
 - Prefixing the property value with `!` set's it with important flag.
@@ -159,7 +161,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 > **`$style('color:red,font-size:2em',elem1)`** <br/> **`$style('color:!black')`**
 
 ---
-**`$addCssRule(rule, {index,sheet}:options)`**
+### **`$addCssRule(rule, {index,sheet}:options)`**
 > **Arg types -**  `rule: string`  `index: number`  `sheet: stylesheet`
 - _Default value of **options** : {}._
 - To set a css rules. By default rule is added to the stylesheet of highest proprity.
@@ -169,7 +171,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 >**`$addCssRule('#id{color:white; background:black}')`**
 
 ---
-**`$removeCssRule({ rule, selector, index, sheet })`**
+### **`$removeCssRule({ rule, selector, index, sheet })`**
 > **Arg types -**  `rule, selector: string`  `index: number`  `sheet: stylesheet`
 - _rule, selector, index : only one of the parameters required_
 - _stylesheet : parameter required_
@@ -183,7 +185,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 >**`$removeCssRule( { rule:'body{overflow:hidden}', sheet:styleElem } )`** <br/>  **`$removeCssRule( { selector:'no_overflow', sheet:styleElem } )`**
 
 ---
-**`$parseNum(string, ?float)`**
+### **`$parseNum(string, ?float)`**
 > **Arg types -**  `string: string`  `float: boolean`
 > _Default value of **float** : false._
 - To parse numbers or array or numbers from a string.
@@ -194,7 +196,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 >**`$parseNum("str 123 124 125.5 str end") : returns array[123,124]`** <br/> **`$parseNum("str 123 124 125.5 str end",true) : returns array[123,124,125.5]`**
 
 ---
-**`Class : $mObserver(attr, child, subtree)`**
+### **`Class : $mObserver(attr, child, subtree)`**
 > **Arg types -**  `attr,child,subtree: boolean`
 - _Default value of **attr, child, subtree** : true._
 - To use mutation ovserver in an easier way. It constructs an object of mutation observer with specified options. That object then can be used to observe elements with their respective callback functions.
@@ -212,7 +214,7 @@ These are the functions I created to help me in my personal projects. Feel free 
     observer.stopObserving()
 
 ---
-**`Class : $iObserver({}:options)`**
+### **`Class : $iObserver({}:options)`**
 > **Arg types -**  `options: object`
 - ***options** : Options of native intersection observer .*
 - _Default value of **options** : { root: null, threshold: 0.25 }._
@@ -231,7 +233,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 	observer.stopObserving(elem2);
 
 ---
-**`$scrolltoElem(elem)`**
+### **`$scrolltoElem(elem)`**
 > **Arg types -**  `elem: elem|string`
 - To scroll to an element in the viewport.
 - Returns : undefined
@@ -240,7 +242,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 >**`$scrolltoElem('#id')`**  **`$scrolltoElem('.class')`**
 
 ---
-**`$switchPositions(elem1, elem2)`**
+### **`$switchPositions(elem1, elem2)`**
 > **Arg types -**  `elem1,elem2: elem`
 - To switch positions of two element in the viewport.
 - Returns : undefined
@@ -249,19 +251,17 @@ These are the functions I created to help me in my personal projects. Feel free 
 >**`$switchPositions(elem1, elem2)`**
 
 ---
-**`$type(obj, ?checkType)`**
+### **`$type(obj, ?checkType)`**
 > **Arg types -**  `obj: anything`  `checkType: string-lowercase`
 - To get or check the constructor name of any object.
 - *checkType is optional, can be used to find if the object is of certain type. Using checkType will make function return a boolean*
 - Returns : string | bloolean
 
-  
-
 **usage :**
 > **`$type(div) : return 'htmldivelement'`** <br/> **`$type([],'array') : return true`**
 
 ---
-**`$isElem(obj)`**
+### **`$isElem(obj)`**
 > **Arg types -**  `obj: anything`
 - To check if an object is a DOM Element of type 1.
 - Returns : boolean
@@ -270,7 +270,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 >**`$isElem(textNode) : return false`**
 
 ---
-**`$checkOverflow(elem)`**
+### **`$checkOverflow(elem)`**
 > **Arg types -**  `elem: elem`
 - To check if element's scroll height is higher than its offset height.
 - Returns : boolean
@@ -279,7 +279,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 >**`$checkOverflow(elem1)`**
 
 ---
-**`$newFragment(children)`**
+### **`$newFragment(children)`**
 > **Arg types -**  `children: array`
 - To make it easier and faster to use fragments.
 - *children: array of elements to append to fragment*.
@@ -289,7 +289,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 >**`$newFragment([elem1,elem2])`**
 
 ---
-**`$makeStr(length, ?characters)`**
+### **`$makeStr(length, ?characters)`**
 > **Arg types -**  `length: number`  `characters: string`
 - To make a random string of specified length.
 - Characters argument is optional and can be used construct a string using specific set of characters.
@@ -300,7 +300,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 >**`$makeStr(5)`** <br/>  **`$makeStr(5,'ac') : returns somethig like 'accac'`**
 
 ---
-**`$arraySplit(array, seperator)`**
+### **`$arraySplit(array, seperator)`**
 > **Arg types -**  `array: array`  `seperator: array item`
 - Similar to string.split but for array.
 - Returns : array of array's
