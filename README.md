@@ -39,7 +39,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 - By default return array can contain both elements and nodelists. Assigning **arrayOne** as **true** will return array with only elements, nodelists are concataned with the return array.
 
 **usage :** 
-> **`$qmulti('div,span')`**  **`$qmulti('@div,span,@h2')`**  **`$qmulti('@div,@span',document,true)`**
+> **`$qmulti('div,span')`** <br/> **`$qmulti('@div,span,@h2')`** <br/> **`$qmulti('@div,@span',document,true)`**
 ---
 **`$qtill(start,end,endPoints,textNodes)`**
 > **Arg types -**  `start,end: elem|string`  `endPoints,textNodes: boolean`
@@ -61,7 +61,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 - _nest_level_ indicates the depth of traversal.
 
 **usage :**  
->**`$closest('h1',originElem)`** **`$closest('div.container|span',originElem)`**
+>**`$closest('h1',originElem)`** <br/> **`$closest('div.container|span',originElem)`**
 
 ---
 **`$wrap(to_wrap,wrap_in)`**
@@ -146,7 +146,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 - Returns : Array
 
 **usage :** 
->**`$cs('@width,@height',elem1)`**  **`$cs('color,@padding',elem2)`**
+>**`$cs('@width,@height',elem1)`** <br/> **`$cs('color,@padding',elem2)`**
 
 ---
 **`$style(css, elem)`**
@@ -156,7 +156,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 - Returns : undefined
 
 **usage :** 
-> **`$style('color:red,font-size:2em',elem1)`**  **`$style('color:!black')`**
+> **`$style('color:red,font-size:2em',elem1)`** <br/> **`$style('color:!black')`**
 
 ---
 **`$addCssRule(rule, {index,sheet}:options)`**
@@ -180,7 +180,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 - Returns : Undefined
 
 **usage :** 
->**`$removeCssRule( { rule:'body{overflow:hidden}', sheet:styleElem } )`**  **`$removeCssRule( { selector:'no_overflow', sheet:styleElem } )`**
+>**`$removeCssRule( { rule:'body{overflow:hidden}', sheet:styleElem } )`** <br/>  **`$removeCssRule( { selector:'no_overflow', sheet:styleElem } )`**
 
 ---
 **`$parseNum(string, ?float)`**
@@ -191,8 +191,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 - Returns : number | array of numbers
 
 **usage :** 
->**`$parseNum("str 123 124 125.5 str end") : returns array[123,124]`**
->**`$parseNum("str 123 124 125.5 str end",true) : returns array[123,124,125.5]`**
+>**`$parseNum("str 123 124 125.5 str end") : returns array[123,124]`** <br/> **`$parseNum("str 123 124 125.5 str end",true) : returns array[123,124,125.5]`**
 
 ---
 **`Class : $mObserver(attr, child, subtree)`**
@@ -259,8 +258,7 @@ These are the functions I created to help me in my personal projects. Feel free 
   
 
 **usage :**
-> **`$type(div) : return 'htmldivelement'`**
-> **`$type([],'array') : return true`**
+> **`$type(div) : return 'htmldivelement'`** <br/> **`$type([],'array') : return true`**
 
 ---
 **`$isElem(obj)`**
@@ -299,7 +297,7 @@ These are the functions I created to help me in my personal projects. Feel free 
 - Returns : string
 
 **usage :**  
->**`$makeStr(5)`**  **`$makeStr(5,'ac') : returns somethig like 'accac'`**
+>**`$makeStr(5)`** <br/>  **`$makeStr(5,'ac') : returns somethig like 'accac'`**
 
 ---
 **`$arraySplit(array, seperator)`**
